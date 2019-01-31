@@ -1,11 +1,4 @@
 <div class="product">
   <button @click="goHome">首頁</button>
-  <div class="img d-flex justify-content-center align-items-center">
-    <div v-lazy-container="{ selector: 'img' }">
-      <img :data-src="img" data-loading="/static/img/image_Loading.png" data-error="/static/img/image_error.png" class='w-100 img-fluid'>
-      <div class="spinner-border lazyloadingStatus" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
-    </div>
-  </div>
+  
 </div>

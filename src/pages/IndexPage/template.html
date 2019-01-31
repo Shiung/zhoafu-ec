@@ -36,7 +36,7 @@
             <div class="row pb-4">
               <div class="col-md-3 col-6" v-for="item in productList" :key="item.id">
                 <transition name="scale" mode="out-in" appear>
-                  <productItem class="product-cate-box-productList" :productName="item.name" :originPrice="item.oPrice" :price="item.price" :img="item.url"/>
+                  <productItem class="product-cate-box-productList" :productID="item.id" :productName="item.name" :originPrice="item.oPrice" :price="item.price" :img="item.url"/>
                 </transition>  
               </div>
               <!-- <div class="moreBtn">查看更多</div> -->
@@ -85,7 +85,7 @@
           </loading>
           <div class="col-lg-5 pr-lg-0">
             <transition name="fade" mode="out-in" appear>
-              <imgLazyLoading class="zfActBox" :imgUrl="actImg"/>
+              <imgLazyLoading class="zfActBox" :imgUrl="actImg" v-if="actImg"/>
             </transition>
           </div>
           <div class="col-lg-7 pl-lg-0">
@@ -93,7 +93,7 @@
               <div class="row py-4 py-lg-0">
                 <div class="col-md-3 col-6 px-2" v-for="item in actList" :key="item.id">
                   <transition name="scale" mode="out-in" appear>
-                    <productItem class="product-act-box-productList" :productName="item.name" :originPrice="item.oPrice" :price="item.price" :img="item.url"/>
+                    <productItem class="product-act-box-productList" :productID="item.id" :productName="item.name" :originPrice="item.oPrice" :price="item.price" :img="item.url"/>
                   </transition>  
                 </div>
               </div>

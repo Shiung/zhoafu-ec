@@ -3,7 +3,7 @@ export default {
   name: 'productItem',
   props: {
     productID: {
-      type: Number,
+      type: String,
       // required: true,
       default: null
     },
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     goPage () {
-      this.$router.push({ name: 'product' })
+      this.$router.push({ name: 'product', params: { id: this.productID } })
     }
   },
   components: {
