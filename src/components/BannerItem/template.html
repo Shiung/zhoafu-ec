@@ -1,0 +1,30 @@
+<div class="bannerItem position-relative">
+  <slick
+    class="bannerHover"
+    ref="slick"
+    :options="slickOptions"
+    @afterChange="handleAfterChange"
+    @beforeChange="handleBeforeChange"
+    @breakpoint="handleBreakpoint"
+    @destroy="handleDestroy"
+    @edge="handleEdge"
+    @init="handleInit"
+    @reInit="handleReInit"
+    @setPosition="handleSetPosition"
+    @swipe="handleSwipe"
+    @lazyLoaded="handleLazyLoaded"
+    @lazyLoadError="handleLazeLoadError">
+
+    <a href="javascript:;" class="banner-img d-flex justify-content-center align-items-center" v-for="(item,key) in data" :key="key">
+      <img :src="item.url" class="w-100 img-fluid" alt="">
+      <!-- lazy loading -->
+      <!-- <div v-lazy-container="{ selector: 'img' }">
+        <img :data-src="item.url" data-loading="/static/img/image_Loading.png" data-error="/static/img/image_error.png" class='w-100 img-fluid'>
+        <div class="spinner-border lazyloadingStatus" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div> -->
+      <!-- lazy loading -->
+    </a>
+  </slick>
+</div>

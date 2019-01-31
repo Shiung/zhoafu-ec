@@ -1,0 +1,30 @@
+@import '../../assets/scss/customer/utilty';
+
+.home{
+  position: relative;
+  padding-top: $navHeight;
+  min-height: 100vh;
+  left: 0;
+  transition: left .3s;
+  .content{
+    height: 1000px;
+    background-color: #e8f6f7;
+  }
+
+  @media screen and (max-width: 767px){
+    &.rwdSwitchOn{
+      left: 50%;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &.rwdSwitchOn{
+      left: 80%;
+    }
+  }
+  
+}
+@media screen and (max-width: 767px){
+  .home{
+    padding-top: $navHeightRWD;
+  }
+}

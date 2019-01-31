@@ -1,0 +1,36 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "./customer/_utilty";
+@import "./customer/_variables";
+@import "~bootstrap/scss/bootstrap.scss";
+
+//vue transition 換頁動畫
+@import "./customer/_vuetransition";
+//vue lazyloading
+@import "./customer/_lazyloading";
+
+@import "./customer/_slick.scss";
+
+// vue overlay loading
+@import 'vue-loading-overlay/dist/vue-loading.css';
+// vue-slick
+@import 'slick-carousel/slick/slick.css';
+
+
+// google fonts 中文
+// @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC');
+// html,body{
+//   font-family: 'Noto Sans TC', sans-serif;
+// }
+
+//  rwd 點選視窗放大問題
+input, textarea {
+  font-size: initial;  
+}
+
+button:focus{
+  outline: none;
+}
+
+#app{
+  overflow: hidden;
+}
