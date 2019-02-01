@@ -2,6 +2,7 @@
 export default {
   name: 'bannerItem',
   props: {
+    // slick customer
     autoplayStatus: {
       type: Boolean,
       default: true
@@ -11,6 +12,7 @@ export default {
     return {
       // slick
       slickOptions: {
+        lazyLoad: 'ondemand',
         slidesToShow: 1,
         slidesToScroll: 1,
         focusOnSelect: true,
@@ -99,7 +101,6 @@ export default {
   },
   async mounted () {
     await this.getData()
-    console.log('過了')
     this.slickOptions.autoplay = this.autoplayStatus
     // this.reInit()
     this.$refs.slick.create()

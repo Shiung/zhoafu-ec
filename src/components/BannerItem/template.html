@@ -15,16 +15,11 @@
     @lazyLoaded="handleLazyLoaded"
     @lazyLoadError="handleLazeLoadError">
 
-    <a href="javascript:;" class="banner-img d-flex justify-content-center align-items-center" v-for="(item,key) in data" :key="key">
-      <img :src="item.url" class="w-100 img-fluid" alt="">
-      <!-- lazy loading -->
-      <!-- <div v-lazy-container="{ selector: 'img' }">
-        <img :data-src="item.url" data-loading="/static/img/image_Loading.png" data-error="/static/img/image_error.png" class='w-100 img-fluid'>
-        <div class="spinner-border lazyloadingStatus" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
-      </div> -->
-      <!-- lazy loading -->
+    <a href="javascript:;" class="banner-img position-relative d-flex justify-content-center align-items-center" v-for="(item,key) in data" :key="key">
+      <img :data-lazy="item.url" class="" alt="">
+      <div class="spinner-border lazyloadingStatus" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
     </a>
   </slick>
 </div>

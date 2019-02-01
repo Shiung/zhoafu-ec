@@ -4,6 +4,57 @@
   max-width: 1799px;
   margin: auto;
   .banner-img{
-    max-height: 400px;
+    // max-height: 400px;
+    height: 400px;
+    overflow: hidden;
+    >img{
+      width: 100%;
+    }
+  }
+  @media screen and ( max-width: 1199px ) {
+    .banner-img{
+      height: 300px;
+      >img{
+      }
+    }
+  }
+  @media screen and ( max-width: 991px ) {
+    .banner-img{
+      height: 250px;
+      >img{
+      }
+    }
+  }
+  @media screen and ( max-width: 767px ) {
+    .banner-img{
+      height: 200px;
+      >img{
+      }
+    }
+  }
+  @media screen and ( max-width: 575px ){
+    .banner-img{
+      height: 200px;
+      >img{
+        width: 180%;
+      }
+    }
+  }
+}
+
+// lazyloading
+img{
+  &.slick-lazyload-error{
+    background: url('/static/img/image_error.png');
+    height: 100%;
+    background-color: #fff;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  &.slick-loading{
+    +.lazyloadingStatus{
+      display: block;
+    }
   }
 }
