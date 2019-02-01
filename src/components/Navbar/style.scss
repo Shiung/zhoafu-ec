@@ -172,6 +172,7 @@ $menuBar3Width : 550px;
         background: none;
         outline: none;
         padding:0 10px; 
+        line-height: 20px;
         &::placeholder{
           font-size: 12px;
           color:$cus-FontColor-gray;
@@ -182,7 +183,7 @@ $menuBar3Width : 550px;
         padding: 0;
         border: none;
         color: $cus-FontColor-gray;
-        // background-color: #ccc;
+        background-color: transparent;
         border-radius: 50%;
         width: 24px;
         height: 24px;
