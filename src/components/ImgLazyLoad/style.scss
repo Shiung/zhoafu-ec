@@ -38,6 +38,7 @@
 
 .imgLazyLoad{
   @include imgSize(productImg, transparent,100%, 60%) ;
+  @include imgSize(productItemImg, transparent,100%, 80%) ;
   @include imgSize(zfActBox, #fff,60%, 100%) ;
   @include imgSize(vendorBoxArea, #fff, 33%, 60%) ; 
   @include imgSize(adBoxArea, transparent,20%, 100%) ;
@@ -49,6 +50,18 @@
 .product-act-box-productList{
   .productImg{
     padding-top: 60%;
+    .img-area{
+      img{
+        width: 40%;
+      }
+    }
+  }
+}
+
+// 商品內頁 圖片fix 
+.product-relate-box-productList{
+  .productImg{
+    padding-top: 50%;
     .img-area{
       img{
         width: 40%;

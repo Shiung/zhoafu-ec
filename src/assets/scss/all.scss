@@ -14,6 +14,8 @@
 @import 'vue-loading-overlay/dist/vue-loading.css';
 // vue-slick
 @import 'slick-carousel/slick/slick.css';
+// vue-carousel
+@import './customer/vueCarousel';
 
 
 // google fonts 中文
@@ -33,4 +35,12 @@ button:focus{
 
 #app{
   overflow: hidden;
+}
+
+.font-12{
+  font-size: 12px;
+}
+
+.bg-transparent{
+  background-color: transparent;
 }

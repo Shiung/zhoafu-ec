@@ -439,5 +439,26 @@
       "id": "navAD02",
       "url": "/static/img/act_test.png"
     }
-  ]
+  ],
+  "productItem": {
+    "id": "test",
+    "title": "[諾鈣C] 維他命C+鈣 發泡錠 20錠(柳橙口味+檸檬口味)",
+    "imgs": [
+      {
+        "url": "/static/img/product-1.png"
+      },
+      {
+        "url": "/static/img/product-2.png"
+      },
+      {
+        "url": "/static/img/product-3.png"
+      },
+      {
+        "url": "/static/img/product-4.png"
+      },
+      {
+        "url": "/static/img/product-5.png"
+      }
+    ]
+  }
 }

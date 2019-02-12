@@ -11,6 +11,8 @@ import Loading from 'vue-loading-overlay'
 import VueLazyload from 'vue-lazyload'
 // vue-slick
 import Slick from 'vue-slick'
+// vue-carousel
+import VueCarousel from 'vue-carousel'
 
 import App from './App'
 import router from './router'
@@ -28,6 +30,8 @@ Vue.use(VueLazyload, {
   lazyComponent: true,
   attempt: 1
 })
+// vue-carousel
+Vue.use(VueCarousel)
 // loading
 Vue.component('loading', Loading) // 全域使用
 // vue-slick
