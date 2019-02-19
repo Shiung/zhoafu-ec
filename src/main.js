@@ -13,6 +13,8 @@ import VueLazyload from 'vue-lazyload'
 import Slick from 'vue-slick'
 // vue-carousel
 import VueCarousel from 'vue-carousel'
+// vue-swal
+import VueSwal from 'vue-swal'
 
 import App from './App'
 import router from './router'
@@ -35,6 +37,8 @@ Vue.use(VueLazyload, {
 })
 // vue-carousel
 Vue.use(VueCarousel)
+// sweetAlert
+Vue.use(VueSwal)
 // loading
 Vue.component('loading', Loading) // 全域使用
 // vue-slick
