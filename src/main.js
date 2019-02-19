@@ -15,6 +15,9 @@ import Slick from 'vue-slick'
 import VueCarousel from 'vue-carousel'
 // vue-swal
 import VueSwal from 'vue-swal'
+// vue-material
+import { MdField, MdRipple, MdButton } from 'vue-material/dist/components'
+import 'vue-material/dist/vue-material.min.css'
 
 import App from './App'
 import router from './router'
@@ -39,6 +42,11 @@ Vue.use(VueLazyload, {
 Vue.use(VueCarousel)
 // sweetAlert
 Vue.use(VueSwal)
+// vue material
+Vue.use(MdField)
+Vue.use(MdRipple)
+Vue.use(MdButton)
+
 // loading
 Vue.component('loading', Loading) // 全域使用
 // vue-slick
