@@ -1,5 +1,4 @@
 <script>
-import initTop from '@/assets/js/initTop.js' // 初始置頂
 export default {
   name: 'indexPage',
   data () {
@@ -95,7 +94,6 @@ export default {
     this.getActProductList()
     this.getHotVendor()
     this.getAdvertisement()
-    initTop()
   }
 }
 </script>

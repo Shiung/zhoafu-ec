@@ -22,6 +22,9 @@ import store from './store'
 // filters
 import currencyFilter from './filters/currency'
 
+// 置頂function
+import initTop from './assets/js/initTop.js' // 初始置頂
+
 Vue.config.productionTip = false
 Vue.use(Vuex)
 Vue.use(VueAxios, axios)
@@ -46,4 +49,11 @@ new Vue({
   store,
   components: { App },
   template: '<App/>'
+})
+
+// 導航守衛 ==> 要在router 變動下才會觸發
+router.beforeEach((to, from, next) => {
+  next()
+  // 置頂function
+  initTop()
 })

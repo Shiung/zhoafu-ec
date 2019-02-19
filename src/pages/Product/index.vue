@@ -1,5 +1,4 @@
 <script>
-import initTop from '@/assets/js/initTop.js' // 初始置頂
 export default {
   name: 'product',
   data () {
@@ -77,11 +76,9 @@ export default {
   mounted () {
     this.getProduct()
     this.getActProductList()
-    initTop()
   },
   watch: {
     productID (val, old) {
-      initTop()
       this.getProduct()
       this.getActProductList()
     }
