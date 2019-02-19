@@ -27,6 +27,11 @@
 @import "~vue-material/dist/components/MdField/theme";
 @import "~vue-material/dist/components/MdButton/theme";
 
+// 解決vue material 字體圓滑修飾的效果不佳
+body{
+  -webkit-font-smoothing: auto;
+}
+
 // google fonts 中文
 // @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC');
 // html,body{
@@ -52,4 +57,10 @@ button:focus{
 
 .bg-transparent{
   background-color: transparent;
+}
+
+a:not(.md-button){
+  &:hover{
+     text-decoration: none;
+  }
 }
