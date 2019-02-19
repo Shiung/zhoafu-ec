@@ -17,7 +17,9 @@ export default {
       // loading
       loadingOpacity: 0.8,
       fullNone: false,
-      relateProductShowLoading: true
+      relateProductShowLoading: true,
+      // countItem
+      countNum: 1
     }
   },
   computed: {
@@ -28,7 +30,8 @@ export default {
   components: {
     imgLazyLoading: () => import('@/components/ImgLazyLoad'),
     productItem: () => import('@/components/ProductItem'),
-    buttonType: () => import('@/components/ButtonItem')
+    buttonType: () => import('@/components/ButtonItem'),
+    countItem: () => import('@/components/CountItem')
   },
   methods: {
     goHome () {
@@ -71,6 +74,10 @@ export default {
     },
     goJointCart () {
       alert('前往連採')
+    },
+    // countNum module
+    countNumChange (num) {
+      this.countNum = num
     }
   },
   mounted () {

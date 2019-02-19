@@ -52,8 +52,15 @@
                   <span class="o-price"><span class="lineThrough">售價: 600</span><span class="mx-2">/</span></span>
                   <span class="n-price">優惠價: <span class="text-danger">500</span></span>
                 </div>
-                <div class="qty mt-4">
-                  <span class="select-qty mr-4">數量: </span>
+                <div class="qty mt-4 d-flex align-items-center justify-content-start">
+                  <span class="select-qty">數量: </span>
+                  <countItem
+                    class="mx-2"
+                    :max="10"
+                    :count="countNum"
+                    @increment="countNumChange"
+                    @decrement="countNumChange"
+                  />
                   <span class="product-qty">庫存數量: 1000瓶</span>
                 </div>
               </div>
