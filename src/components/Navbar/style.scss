@@ -43,6 +43,12 @@ $menuBar3Width : 550px;
             top:0;
           }
         }
+        >a.router-link-active{
+          color: $cus-green;
+          +.line{
+            top:0;
+          }
+        }
       }
       
     }

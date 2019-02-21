@@ -21,7 +21,7 @@
 //vue-material customer
 @import "~vue-material/dist/theme/engine"; // Import the theme engine
 @include md-register-theme("default", (
-  primary: $customer,//md-get-palette-color(blue, A200), // The primary color of your application
+  primary: $cus-green,//md-get-palette-color(blue, A200), // The primary color of your application
   accent: #448aff //md-get-palette-color(red, A200) // The accent or secondary color
 ));
 @import "~vue-material/dist/components/MdField/theme";
@@ -55,6 +55,20 @@ button:focus{
   font-size: 12px;
 }
 
+.font-14{
+  font-size: 14px;
+}
+
+.font-color-gray{
+  color:$cus-FontColor-gray;
+}
+.font-color-red{
+  color:$cus-red;
+}
+.border-color-gary{
+  border-color: lighten($cus-FontColor-gray , 18%) !important;
+}
+
 .bg-transparent{
   background-color: transparent;
 }
@@ -63,4 +77,11 @@ a:not(.md-button){
   &:hover{
      text-decoration: none;
   }
+}
+
+
+// 內頁 高度
+.innerPage{
+  min-height: 100vh;  
+  padding: 15px;
 }
