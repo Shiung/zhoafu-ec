@@ -6,7 +6,7 @@
   </li>
   <!-- <li class="nav-item countShow d-flex align-items-center justify-content-center">{{count}}</li> -->
   <li class="nav-item countShow d-flex align-items-center justify-content-center">
-    <input type="number" v-model.number="dataInput" @input="change" :max="max" :min="min">
+    <input type="number" v-model.number.lazy="dataInput" :max="max" :min="min">
   </li>
   <li class="nav-item count-controlBtn d-flex align-items-center" :class="{'disabled' : count >= max}" @click="addCount">
     <md-ripple class="d-flex align-items-center justify-content-center">
