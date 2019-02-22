@@ -7,7 +7,7 @@ $expiry-bg: #e2eefd;
   // min-height: 100vh;  
   // padding: 15px ;
   .product-box{
-    padding: 20px 20px 40px;
+    padding: 20px 0px 40px;
     min-height: 100vh;
     .productImgSelects{
       >.imgs{
@@ -186,7 +186,9 @@ $expiry-bg: #e2eefd;
     }
   }
 }
-button.gotopTest{
-  position: absolute;
-  bottom: 0;
+
+@media screen and (max-width: 575px){
+  .rwd-100{
+    width: 100% !important;
+  }
 }

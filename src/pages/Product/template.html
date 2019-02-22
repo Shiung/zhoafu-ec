@@ -4,7 +4,7 @@
       <div class="col-12 d-md-block d-none">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb p-0 font-12 bg-transparent">
-            <li class="breadcrumb-item">目前位置 : <a href="javascript:;">首頁</a></li>
+            <li class="breadcrumb-item">目前位置 : <a href="javascript:;" @click="goHome">首頁</a></li>
             <li class="breadcrumb-item active">商品分類</li>
             <li class="breadcrumb-item active">西藥商品</li>
             <li class="breadcrumb-item active">化謝作用商品</li>
@@ -17,7 +17,7 @@
 
     <div class="col-12">
       <div class="product-box bg-white row">
-        <div class="col-5">
+        <div class="col-lg-5 offset-lg-0 col-sm-6 offset-sm-3">
           <transition name="fade" mode="out-in" appear>
             <imgLazyLoading class="productItemImg" :imgUrl="productImg" v-if="showImg"/>
           </transition>
@@ -36,7 +36,7 @@
             </div>
           </div>
         </div>
-        <div class="col-7">
+        <div class="col-lg-7">
           <div class="productContent">
             <div class="product-title">{{productTitle}}</div>
             <div class="subDescribe">
@@ -46,13 +46,13 @@
                 <li>碳酸鈣327mg</li>
               </ul>
             </div>
-            <div class="productBuy border border-right-0 border-left-0 border-color-gary d-flex justify-content-between align-items-center">
+            <div class="productBuy border border-right-0 border-left-0 border-color-gary d-flex justify-content-between align-items-center flex-column flex-sm-row">
               <div class="qp-area">
                 <div class="price">
                   <span class="o-price"><span class="lineThrough">售價: 600</span><span class="mx-2">/</span></span>
                   <span class="n-price">優惠價: <span class="text-danger">500</span></span>
                 </div>
-                <div class="qty mt-4 d-flex align-items-center justify-content-start">
+                <div class="qty mt-sm-4 mt-2 d-flex align-items-center justify-content-start">
                   <span class="select-qty">數量: </span>
                   <countItem
                     class="mx-2"
@@ -64,7 +64,7 @@
                 </div>
               </div>
               
-              <buttonType class="goCart" btnStr="直購" @stepGo="goCart"/>
+              <buttonType class="goCart rwd-100 mt-2 mt-sm-0" btnStr="直購" @stepGo="goCart"/>
             </div>
 
             <div class="joint-procurement-area border border-top-0 border-right-0 border-left-0 border-color-gary">
@@ -72,7 +72,7 @@
 
               </div>
               <div class="joint-procurement-expiry d-flex justify-content-between align-items-center">
-                <span class="expiry">到期時間：2019/01/25 ~ 2019/02/15 00時</span>
+                <div class="expiry d-sm-block d-flex flex-column">到期時間：<span>2019/01/25 ~ 2019/02/15 00時</span></div>
                 <button class="info-btn d-flex justify-content-center align-items-center"><i class="material-icons">priority_high</i></button> 
               </div>
               <buttonType class="jointCart" btnStr="聯合採購" @stepGo="goJointCart"/>
@@ -138,6 +138,7 @@
           :autoplay="vueCarouselAuto" 
           :loop="false"
           :perPage="vueCarouselPerPage" 
+          :perPageCustom="[[300, 2], [576, 3], [768, 4]]"
           :navigationEnabled="true"
           :paginationActiveColor="vueCarouselDotActiveColor"
           >
@@ -152,7 +153,4 @@
     </div>
     
   </div>
-
-  <button class="gotopTest" @click="goHome">首頁</button>
-  {{productID}}
 </div>
