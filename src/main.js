@@ -15,8 +15,10 @@ import Slick from 'vue-slick'
 import VueCarousel from 'vue-carousel'
 // vue-swal
 import VueSwal from 'vue-swal'
+// vue select
+import vSelect from 'vue-select'
 // vue-material
-import { MdField, MdRipple, MdButton } from 'vue-material/dist/components'
+import { MdField, MdRipple, MdButton, MdRadio } from 'vue-material/dist/components'
 import 'vue-material/dist/vue-material.min.css'
 
 import App from './App'
@@ -46,11 +48,14 @@ Vue.use(VueSwal)
 Vue.use(MdField)
 Vue.use(MdRipple)
 Vue.use(MdButton)
+Vue.use(MdRadio)
 
 // loading
 Vue.component('loading', Loading) // 全域使用
 // vue-slick
 Vue.component('Slick', Slick) // 全域使用
+// vue select
+Vue.component('v-select', vSelect)
 // filters
 Vue.filter('currency', currencyFilter) // 全域使用
 

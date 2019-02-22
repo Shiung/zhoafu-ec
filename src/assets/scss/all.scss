@@ -26,6 +26,7 @@
 ));
 @import "~vue-material/dist/components/MdField/theme";
 @import "~vue-material/dist/components/MdButton/theme";
+@import "~vue-material/dist/components/MdRadio/theme";
 
 // 解決vue material 字體圓滑修飾的效果不佳
 body{
@@ -46,6 +47,9 @@ input, textarea {
 button:focus{
   outline: none;
 }
+input.cusInput:focus{
+  outline: 3px solid rgba($cus-green, .5);
+}
 
 #app{
   overflow: hidden;
@@ -59,6 +63,12 @@ button:focus{
   font-size: 14px;
 }
 
+.font-color-darkblue{
+  color:$cus-menuBar-second;
+}
+.font-color-lightblue{
+  color:$cus-lightblue;
+}
 .font-color-gray{
   color:$cus-FontColor-gray;
 }
@@ -67,6 +77,9 @@ button:focus{
 }
 .border-color-gary{
   border-color: lighten($cus-FontColor-gray , 18%) !important;
+}
+.bg-color-gray{
+  background-color: lighten($cus-FontColor-gray , 18%);
 }
 
 .bg-transparent{
@@ -83,5 +96,52 @@ a:not(.md-button){
 // 內頁 高度
 .innerPage{
   min-height: 100vh;  
-  padding: 15px;
+  padding: 15px 15px 50px 15px;
+  @media screen and (max-width: 767px) {
+    .container{
+      max-width: 100%;
+      padding: 0;
+    } 
+  }
 }
+
+
+// fix label mb
+.labelMB-0{
+  >label{
+     margin-bottom: 0;
+  }
+}
+
+// vue select fix 套件style start ------
+.cus-vueselect{
+  font-size:12px;
+  input{
+    height: 25px;
+  }
+  .dropdown-toggle{
+    &::after{
+      display: none;
+    }
+  }
+  .dropdown-menu{
+    border-color:$cus-green;
+  }
+  .vs__actions{
+    .clear{
+      color:$cus-green;
+    }
+    .open-indicator:before{
+      border-color:$cus-green;
+    }
+  }
+  &.open{
+    .dropdown-toggle{
+      border-color:$cus-green;
+    }
+  }
+}
+.cus-vueselect-180{
+  width: 160px;
+}
+// vue select fix 套件style end -------

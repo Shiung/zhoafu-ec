@@ -21,6 +21,11 @@ export default new Router({
           path: 'product/:id',
           name: 'product',
           component: () => import('@/pages/Product')
+        },
+        {
+          path: 'cart',
+          name: 'cart',
+          component: () => import('@/pages/Cart')
         }
       ]
     }
