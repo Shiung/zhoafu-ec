@@ -59,6 +59,9 @@ export default {
   methods: {
     // vuex
     ...mapActions(['menu_status']),
+    goHome () {
+      this.$router.push({ name: 'home' })
+    },
     showMenu () {
       this.menuListShowLoading = true
       this.showMenuBoxSwitch = !this.showMenuBoxSwitch
