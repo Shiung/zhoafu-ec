@@ -18,6 +18,7 @@ export default {
         focusOnSelect: true,
         autoplay: true,
         autoplaySpeed: 5000,
+        dots: true,
         prevArrow: '<button type="button" class="slick-prev"><i class="material-icons">chevron_left</i></button>',
         nextArrow: '<button type="button" class="slick-next"><i class="material-icons">chevron_right</i></button>'
       },
