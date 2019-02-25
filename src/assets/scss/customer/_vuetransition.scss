@@ -114,3 +114,24 @@
 .returnBack-leave-active {
   transition: .5s  ;
 }
+
+
+//gotopOption
+.gotopOption-enter,
+.gotopOption-leave-to {
+  // left: -50px;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.gotopOption-enter-to,
+.gotopOption-leave {
+  transform: translateY(0%);
+  opacity: 1;
+  // left: 0;
+}
+
+.gotopOption-enter-active,
+.gotopOption-leave-active {
+  transition: .5s  ;
+}
