@@ -128,7 +128,7 @@
                 loader="dots"
               ></loading>
               <li class="nav-item position-relative" v-for="item in productCateListThird" :key="item.id">
-                <a class="nav-link" href="javascript:;">{{item.name}}</a>
+                <a class="nav-link" href="javascript:;" @click="goCatePage(item.id)">{{item.name}}</a>
               </li>
             </ul>
           </div>
@@ -191,7 +191,7 @@
                   loader="dots"
                 ></loading>
                 <li class="d-flex justify-content-start align-items-center" v-for="item3 in productCateListThird" :key="item3.id">
-                    <a class="nav-link text-nowrap flex-fill" href="javascript:;">{{item3.name}}</a>
+                    <a class="nav-link text-nowrap flex-fill" href="javascript:;" @click="goCatePage(item3.id)">{{item3.name}}</a>
                 </li>
               </ul>
               <div class="flex-fill col-12 pt-3 ml-3">
