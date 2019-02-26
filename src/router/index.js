@@ -26,8 +26,17 @@ export default new Router({
           path: 'cart',
           name: 'cart',
           component: () => import('@/pages/Cart')
+        },
+        {
+          path: 'ProductCate/:id',
+          name: 'productCate',
+          component: () => import('@/pages/ProductCate')
         }
       ]
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
   ]
 })

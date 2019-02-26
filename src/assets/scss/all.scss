@@ -28,6 +28,9 @@
 @import "~vue-material/dist/components/MdField/theme";
 @import "~vue-material/dist/components/MdButton/theme";
 @import "~vue-material/dist/components/MdRadio/theme";
+@import "~vue-material/dist/components/MdMenu/theme";
+@import "~vue-material/dist/components/MdList/theme";
+@import "~vue-material/dist/components/MdDialog/theme";
 
 // 解決vue material 字體圓滑修飾的效果不佳
 body{
@@ -146,3 +149,21 @@ a:not(.md-button){
   width: 160px;
 }
 // vue select fix 套件style end -------
+
+
+// vue material fix
+// md-menu (商品分類裡過濾器)
+$btn-top : #fcfefe ; 
+$btn-bottom : #f4f6f8 ;
+.cus-menu-filter-btn{
+  background: linear-gradient(180deg, $btn-top 0%, $btn-bottom 100%) !important;
+  color:#888 !important;
+}
+.cus-menu-filter{
+  .md-menu-content-container{
+    .md-list-item-content{
+      font-size:12px;
+      min-height:30px;
+    }
+  }
+}

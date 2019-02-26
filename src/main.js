@@ -18,7 +18,7 @@ import VueSwal from 'vue-swal'
 // vue select
 import vSelect from 'vue-select'
 // vue-material
-import { MdField, MdRipple, MdButton, MdRadio } from 'vue-material/dist/components'
+import { MdField, MdRipple, MdButton, MdRadio, MdMenu, MdList, MdDialog } from 'vue-material/dist/components'
 import 'vue-material/dist/vue-material.min.css'
 
 import App from './App'
@@ -49,6 +49,9 @@ Vue.use(MdField)
 Vue.use(MdRipple)
 Vue.use(MdButton)
 Vue.use(MdRadio)
+Vue.use(MdMenu)
+Vue.use(MdList)
+Vue.use(MdDialog)
 
 // loading
 Vue.component('loading', Loading) // 全域使用
