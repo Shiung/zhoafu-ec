@@ -201,3 +201,38 @@ $btn-bottom : #f4f6f8 ;
     }
   }
 }
+
+// table cus
+.cus-table{
+  thead{
+    th:not(:last-child){
+      position: relative;
+      &::after{
+        content: '';
+        display: block;
+        width: 1px;
+        height: 50%;
+        background-color: #ccc;
+        position: absolute;
+        top:50%;
+        right: 0;
+        transform: translate(-50%, -50%); 
+      }
+    }
+  }
+  tbody{
+    tr:nth-of-type(even){
+      background-color: #f8f8f8;
+    }
+  }
+
+  // 功能按鈕
+  .cus-btn{
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: $cus-menuBar-bg;
+    color: $cus-menuBar-up;
+    border:none;
+    cursor: pointer;
+  }
+}

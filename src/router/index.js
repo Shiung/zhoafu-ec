@@ -52,6 +52,11 @@ export default new Router({
               path: 'memPsw',
               name: 'memPsw',
               component: () => import('@/pages/MemPsw')
+            },
+            {
+              path: 'memOrderCheck',
+              name: 'memOrderCheck',
+              component: () => import('@/pages/MemOrderCheck')
             }
           ]
         }
