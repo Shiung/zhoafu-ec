@@ -31,6 +31,28 @@
 @import "~vue-material/dist/components/MdMenu/theme";
 @import "~vue-material/dist/components/MdList/theme";
 @import "~vue-material/dist/components/MdDialog/theme";
+@import "~vue-material/dist/components/MdSwitch/theme";
+
+// vue datetime ------------------
+@import 'vue-datetime/dist/vue-datetime.css';
+.vdatetime-overlay{
+  z-index: 1031;
+}
+.vdatetime-popup{
+  z-index: 1032;
+}
+.theme-customer .vdatetime-popup__header,
+.theme-customer .vdatetime-calendar__month__day--selected > span > span,
+.theme-customer .vdatetime-calendar__month__day--selected:hover > span > span {
+  background: $customer;
+}
+
+.theme-customer .vdatetime-year-picker__item--selected,
+.theme-customer .vdatetime-time-picker__item--selected,
+.theme-customer .vdatetime-popup__actions__button {
+  color: $customer;
+}
+// vue datetime ------------------end
 
 // 解決vue material 字體圓滑修飾的效果不佳
 body{
@@ -93,6 +115,18 @@ input.cusInput:focus{
 a:not(.md-button){
   &:hover{
      text-decoration: none;
+  }
+}
+
+
+// boostrap input
+.cus-input{
+  &:focus{
+    box-shadow: none;
+    border-color:$cus-green;
+  }
+  &.cus-with-250{
+    width: 250px;
   }
 }
 

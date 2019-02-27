@@ -18,8 +18,10 @@ import VueSwal from 'vue-swal'
 // vue select
 import vSelect from 'vue-select'
 // vue-material
-import { MdField, MdRipple, MdButton, MdRadio, MdMenu, MdList, MdDialog } from 'vue-material/dist/components'
+import { MdField, MdRipple, MdButton, MdRadio, MdMenu, MdList, MdDialog, MdSwitch } from 'vue-material/dist/components'
 import 'vue-material/dist/vue-material.min.css'
+// vue-dattime
+import Datetime from 'vue-datetime'
 
 import App from './App'
 import router from './router'
@@ -52,6 +54,10 @@ Vue.use(MdRadio)
 Vue.use(MdMenu)
 Vue.use(MdList)
 Vue.use(MdDialog)
+Vue.use(MdSwitch)
+
+// vue datetime
+Vue.use(Datetime)
 
 // loading
 Vue.component('loading', Loading) // 全域使用

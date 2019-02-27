@@ -36,6 +36,24 @@ export default new Router({
           path: 'productCate/:id',
           name: 'productCate',
           component: () => import('@/pages/ProductCate')
+        },
+        {
+          path: 'memCenter',
+          name: 'memCenter',
+          component: () => import('@/pages/MemCenter'),
+          redirect: 'memCenter',
+          children: [
+            {
+              path: '',
+              name: 'memInfo',
+              component: () => import('@/pages/MemInfo')
+            },
+            {
+              path: 'memPsw',
+              name: 'memPsw',
+              component: () => import('@/pages/MemPsw')
+            }
+          ]
         }
       ]
     },
